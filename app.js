@@ -32,7 +32,25 @@ function atualizarLista(){
 
 
 
-
 function sortearAmigo(){
+    if (nomes.length === 0){
+       alert("Erro! A lista está vazia.")
+    }
+
+    let indiceSorteado = Math.floor(Math.random() * nomes.length)
+
+    let nomeSorteado = nomes[indiceSorteado];
+
+    document.getElementById("resultado").innerHTML = `O amigo sorteado foi: <strong>${nomeSorteado}</strong>`;
     
+}
+
+function limparLista(){
+    nomes = [];
+
+    let lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+
+    document.getElementById("resultado").innerHTML = "";
+
 }
